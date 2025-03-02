@@ -1,0 +1,181 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background: #f5f7fa;
+    color: #333;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  .dark-mode {
+    background: #1e1e1e;
+    color: #ddd;
+  }
+  
+  /* Header */
+  .site-header {
+    background: #2a3f54;
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Navigation */
+  .site-nav {
+    background: #293846;
+  }
+  
+  .site-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .site-nav ul li {
+    margin: 0 1rem;
+  }
+  
+  .site-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: background 0.3s;
+  }
+  
+  .site-nav ul li a:hover {
+    background: #1a2734;
+    border-radius: 4px;
+  }
+  
+  /* Main Content */
+  .site-main {
+    padding: 2rem;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  
+  /* Forms */
+  .form-box {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+  }
+  
+  .form-box label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  
+  .form-box input,
+  .form-box textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .btn {
+    background: #007BFF;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.3s;
+  }
+  
+  .btn:hover {
+    background: #0056b3;
+  }
+  
+  .form-message {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    border-radius: 4px;
+    background: #d4edda;
+    color: #155724;
+  }
+  
+  /* Blog & Preview */
+  .preview-section {
+    margin-top: 2rem;
+  }
+  
+  .preview-box {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 4px;
+    min-height: 150px;
+  }
+  
+  .blog-media {
+    max-width: 100%;
+    display: block;
+    margin-top: 1rem;
+  }
+  
+  /* Chat Styles */
+  .chat-window {
+    border: 1px solid #ccc;
+    height: 300px;
+    overflow-y: auto;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+  }
+  
+  .chat-form input {
+    width: 80%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .chat-form button {
+    width: 18%;
+    padding: 0.75rem;
+    margin-left: 2%;
+    background: #28a745;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: 500;
+  }
+  
+  /* Footer */
+  .site-footer {
+    background: #2a3f54;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .site-nav ul {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .site-nav ul li {
+      margin: 0.5rem 0;
+    }
+  }
+  

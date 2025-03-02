@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Membership Registration - Java Skill Bee Club</title>
+  <link rel="stylesheet" href="/css/membership.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>Membership Registration</h1>
+    <button id="darkModeToggle">Toggle Dark Mode</button>
+  </header>
+  <nav class="site-nav">
+    <ul>
+      <li><a href="/">Home</a></li>
+    </ul>
+  </nav>
+  <main class="site-main">
+    <form id="membershipForm" action="/membership" method="POST" class="form-box">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" placeholder="Enter your username" required>
+      
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password" required>
+      
+      <button type="submit" class="btn">Register</button>
+      <div id="membershipMsg" class="form-message" style="display:none;"></div>
+    </form>
+  </main>
+  <footer class="site-footer">
+    <p>&copy; 2023 Java Skill Bee Club</p>
+  </footer>
+  <script src="/js/main.js"></script>
+</body>
+</html>

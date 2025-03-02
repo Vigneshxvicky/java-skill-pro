@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Event Calendar - Java Skill Bee Club</title>
+  <link rel="stylesheet" href="/css/calender.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <h1>Event Calendar</h1>
+    <button id="darkModeToggle">Toggle Dark Mode</button>
+  </header>
+  <nav class="site-nav">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/membership">Membership</a></li>
+      <li><a href="/chat">Chat</a></li>
+      <li><a href="/profile">Profile</a></li>
+      <li><a href="/logout">Logout</a></li>
+    </ul>
+  </nav>
+  <main class="site-main">
+    <div id="calendar"></div>
+  </main>
+  <footer class="site-footer">
+    <p>&copy; 2023 Java Skill Bee Club</p>
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var calendarEl = document.getElementById('calendar');
+      var calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+        events: [
+          { title: 'Java Workshop', date: '2023-11-10' },
+          { title: 'Skill Bee Round 1', date: '2023-11-15' },
+          { title: 'Skill Bee Finals', date: '2023-11-20' }
+        ]
+      });
+      calendar.render();
+      // Dark mode toggle
+      const btn = document.getElementById('darkModeToggle');
+      btn.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+      });
+    });
+  </script>
+</body>
+</html>

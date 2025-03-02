@@ -1,0 +1,130 @@
+/* ====================================== */
+/*             calendar.css             */
+/*      Calendar Page – Custom Styles   */
+/* ====================================== */
+
+/* Global Reset & Variables */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #28a745;
+  --primary-dark: #0056b3;
+  --background-light: #f5f7fa;
+  --background-dark: #1e1e1e;
+  --header-bg: #ff6f61;
+  --nav-bg: #ffb74d;
+  --footer-bg: #4db6ac;
+  --text-color: #333;
+  --text-light: #ddd;
+  --border-color: #ccc;
+  --transition-speed: 0.3s;
+  --font-family: "Roboto", sans-serif;
+  --font-size-base: 16px;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  background: var(--background-light);
+  color: var(--text-color);
+  transition: background var(--transition-speed), color var(--transition-speed);
+}
+
+body.dark-mode {
+  background: var(--background-dark);
+  color: var(--text-light);
+}
+
+/* Header, Navigation & Footer (Same as Other Pages) */
+.site-header {
+  background: var(--header-bg);
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.site-header button {
+  background: var(--primary-color);
+  border: none;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background var(--transition-speed);
+}
+
+.site-header button:hover {
+  background: var(--primary-dark);
+}
+
+.site-nav {
+  background: var(--nav-bg);
+}
+
+.site-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.site-nav ul li {
+  margin: 0.5rem 1rem;
+}
+
+.site-nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: background var(--transition-speed);
+  border-radius: 4px;
+}
+
+.site-nav ul li a:hover {
+  background: var(--primary-color);
+}
+
+/* Main Content for Calendar */
+.site-main {
+  padding: 2rem;
+  max-width: 960px;
+  margin: 2rem auto;
+}
+
+/* Custom Calendar Container */
+#calendar {
+  max-width: 960px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode #calendar {
+  background: #2a2a2a;
+}
+
+/* Footer */
+.site-footer {
+  background: var(--footer-bg);
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}

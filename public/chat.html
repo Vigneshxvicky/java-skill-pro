@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Chat Room - Java Skill Bee Club</title>
+    <link rel="stylesheet" href="/css/chat.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>Real‑Time Chat</h1>
+      <button id="darkModeToggle">Toggle Dark Mode</button>
+    </header>
+    <nav class="site-nav">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/membership">Membership</a></li>
+        <li><a href="/blog">Edit Blog</a></li>
+        <li><a href="/profile">Profile</a></li>
+        <li><a href="/logout">Logout</a></li>
+      </ul>
+    </nav>
+    <main class="site-main">
+      <div id="chatWindow" class="chat-window">
+        <!-- Chat messages will be appended here -->
+      </div>
+      <form id="chatForm" class="chat-form">
+        <input
+          id="chatInput"
+          autocomplete="off"
+          placeholder="Type your message here"
+        />
+        <button>Send</button>
+      </form>
+    </main>
+    <footer class="site-footer">
+      <p>&copy; 2023 Java Skill Bee Club</p>
+    </footer>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/chat.js"></script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>

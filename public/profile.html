@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Profile - Java Skill Bee Club</title>
+    <link rel="stylesheet" href="/css/profile.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>Your Profile</h1>
+      <button id="darkModeToggle">Toggle Dark Mode</button>
+    </header>
+    <nav class="site-nav">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog">Edit Blog</a></li>
+        <li><a href="/myblog">My Blog</a></li>
+        <li><a href="/calendar">Calendar</a></li>
+        <li><a href="/chat">Chat</a></li>
+        <li><a href="/logout">Logout</a></li>
+      </ul>
+    </nav>
+    <main class="site-main">
+      <form action="/profile" method="POST" class="form-box">
+        <label for="bio">Bio</label>
+        <textarea
+          id="bio"
+          name="bio"
+          rows="4"
+          placeholder="Write something about yourself..."
+        ></textarea>
+        <label for="profilePicture">Profile Picture URL</label>
+        <input
+          type="text"
+          id="profilePicture"
+          name="profilePicture"
+          placeholder="https://..."
+        />
+        <button type="submit" class="btn">Update Profile</button>
+      </form>
+      <!-- Points will be rendered from the server -->
+    </main>
+    <footer class="site-footer">
+      <p>&copy; 2023 Java Skill Bee Club</p>
+    </footer>
+    <script src="/js/main.js"></script>
+  </body>
+</html>

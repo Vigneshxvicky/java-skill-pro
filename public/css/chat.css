@@ -1,0 +1,173 @@
+/* ====================================== */
+/*               chat.css               */
+/*   Chat Room – Styles for Chat & Toasts */
+/* ====================================== */
+
+/* Global Reset & Variables */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  :root {
+    --primary-color: #007BFF;
+    --secondary-color: #28a745;
+    --primary-dark: #0056b3;
+    --background-light: #f5f7fa;
+    --background-dark: #1e1e1e;
+    --header-bg: #ff6f61;
+    --nav-bg: #ffb74d;
+    --footer-bg: #4db6ac;
+    --text-color: #333;
+    --text-light: #ddd;
+    --border-color: #ccc;
+    --transition-speed: 0.3s;
+    --font-family: 'Roboto', sans-serif;
+    --font-size-base: 16px;
+  }
+  
+  body {
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    background: var(--background-light);
+    color: var(--text-color);
+    transition: background var(--transition-speed), color var(--transition-speed);
+  }
+  body.dark-mode {
+    background: var(--background-dark);
+    color: var(--text-light);
+  }
+  
+  /* Header & Navigation */
+  .site-header {
+    background: var(--header-bg);
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .site-header h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+  .site-header button {
+    background: var(--primary-color);
+    border: none;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background var(--transition-speed);
+  }
+  .site-header button:hover {
+    background: var(--primary-dark);
+  }
+  
+  .site-nav {
+    background: var(--nav-bg);
+  }
+  .site-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+  }
+  .site-nav ul li {
+    margin: 0.5rem 1rem;
+  }
+  .site-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background var(--transition-speed);
+    border-radius: 4px;
+  }
+  .site-nav ul li a:hover {
+    background: var(--primary-color);
+  }
+  
+  /* Main Content – Chat */
+  .site-main {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 2rem auto;
+  }
+  
+  /* Chat Window */
+  .chat-window {
+    border: 1px solid var(--border-color);
+    height: 300px;
+    overflow-y: auto;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+  }
+  body.dark-mode .chat-window {
+    background: #2a2a2a;
+  }
+  
+  /* Chat Form */
+  .chat-form {
+    display: flex;
+    align-items: center;
+  }
+  .chat-form input {
+    flex: 1;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  .chat-form button {
+    margin-left: 0.5rem;
+    background: var(--secondary-color);
+    padding: 0.75rem 1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    transition: background var(--transition-speed);
+  }
+  .chat-form button:hover {
+    background: #1e7e34;
+  }
+  
+  /* Toast Notifications */
+  .toast-notification {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 1rem;
+    border-radius: 4px;
+    z-index: 1000;
+    opacity: 0.9;
+    animation: fadeOut 4s forwards;
+  }
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 0.9;
+    }
+    90% {
+      opacity: 0.9;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  /* Footer */
+  .site-footer {
+    background: var(--footer-bg);
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
